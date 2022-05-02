@@ -27,12 +27,28 @@ class Sockets {
             socket.on('joinRoom', (data) => {
                 console.log(`Un cliente se ha unido a la sala: ${data.room}`);
                 socket.join(data.room);
+
+                /* var users = this.io.sockets.clients(data.room);
+                var list_users = [];
+                        
+                users.forEach(function(client){         
+                    list_users.push(client.username);       
+                });
+                this.io.to(data.room).emit('updateUsers', { users: list_users.length }); */
             } );
             
             //* escuchar evento de dejar la sala dado el project id
             socket.on('leaveRoom', (data) => {
                 console.log(`Un cliente ha dejado la sala: ${data.room}`);
                 socket.leave(data.room);
+
+                /* var users = this.io.sockets.clients(data.room);
+                var list_users = [];
+                        
+                users.forEach(function(client){         
+                    list_users.push(client.username);       
+                });
+                this.io.to(data.room).emit('updateUsers', { users: list_users.length }); */
             } );
             
             //* cuando se cambia el nombre del project
@@ -88,14 +104,8 @@ class Sockets {
             } )
 
 
-            // * escuchar evento cuando
-            // socket.emit('current-bands', this.bandList.getBands() );
+            // * escuchar evento cuando 
             
-            
-            /* socket.on('votar-banda', (id) => {
-                this.bandList.increaseVotes(id);
-                this.io.emit('current-bands', this.bandList.getBands() );
-            }) */
 
         });
 
