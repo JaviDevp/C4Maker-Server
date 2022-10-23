@@ -1,7 +1,6 @@
 class Sockets {
   constructor(io) {
     this.io = io;
-    this.bandList = new BandList();
 
     this.socketEvents();
   }
