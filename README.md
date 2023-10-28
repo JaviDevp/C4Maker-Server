@@ -21,7 +21,7 @@ Para ejecutar este servidor en tu entorno local, sigue estos pasos:
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/c4-maker-server.git
+   git clone https://github.com/JaviDevp/C4Maker-Server.git
    ```
 
 2. Ingresa al directorio del servidor:
